@@ -1,416 +1,69 @@
 <!DOCTYPE html>
 <html lang="ta">
-<meta name="google-site-verification" content="i1z3wclYKBhDKUoyhvS3hkEr8BbVGQWMC5XKH4Bx20s" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="google-site-verification" content="i1z3w..." />
+    
+    <title>Suriyaraj Gunasekaran | தமிழ் எழுத்தாளர்</title>
+    <meta name="description" content="Official website of Suriyaraj Gunasekaran - Tamil Author">
+    <meta name="keywords" content="Suriyaraj Gunasekaran, Tamil Author, எழுத்தாளர்">
+    <meta name="author" content="Suriyaraj Gunasekaran">
+    <link rel="canonical" href="https://suriyaraj6748-hub.github.io/">
 
-<title>Suriyaraj Gunasekaran | தமிழ் எழுத்தாளர்</title>
-
-<meta name="description" content="Suriyaraj Gunasekaran — தமிழ் கவிதைகள், எழுத்துக்கள் மற்றும் சிந்தனைகளின் அதிகாரப்பூர்வ இணையதளம்.">
-
-<meta name="keywords" content="Suriyaraj Gunasekaran, Suriyaraj, Tamil writer, Tamil poet, Tamil poems, தமிழ் கவிதைகள், தமிழ் எழுத்தாளர்">
-
-<meta name="author" content="Suriyaraj Gunasekaran">
-
-<link rel="canonical" href="https://suriyaraj6748-hub.github.io/">
-
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Georgia, "Noto Serif Tamil", serif;
-    background: #0b0b0f;
-    color: #eeeeee;
-    line-height: 1.8;
-}
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(11,11,15,0.95);
-    border-bottom: 1px solid #292932;
-    backdrop-filter: blur(10px);
-}
-
-.nav {
-    min-height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.logo {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 21px;
-    font-weight: bold;
-}
-
-nav a {
-    color: #bbbbc5;
-    text-decoration: none;
-    margin-left: 22px;
-    font-size: 15px;
-}
-
-nav a:hover {
-    color: white;
-}
-
-.hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #292932;
-}
-
-.hero-content {
-    max-width: 800px;
-    padding: 80px 0;
-}
-
-.tag {
-    color: #c9a96e;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 13px;
-    margin-bottom: 25px;
-}
-
-h1 {
-    font-size: clamp(45px, 8vw, 82px);
-    line-height: 1.15;
-    margin-bottom: 30px;
-}
-
-h1 span {
-    color: #c9a96e;
-}
-
-.hero-text {
-    max-width: 650px;
-    color: #b7b7c0;
-    font-size: 20px;
-    margin-bottom: 35px;
-}
-
-.button {
-    display: inline-block;
-    padding: 13px 25px;
-    border: 1px solid #c9a96e;
-    color: #c9a96e;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-
-.button:hover {
-    background: #c9a96e;
-    color: #0b0b0f;
-}
-
-section {
-    padding: 100px 0;
-}
-
-.section-title {
-    color: #c9a96e;
-    letter-spacing: 3px;
-    font-size: 13px;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 42px;
-    margin-bottom: 45px;
-}
-
-.poem-card {
-    max-width: 750px;
-    padding: 45px;
-    background: #111117;
-    border: 1px solid #292932;
-    border-radius: 12px;
-}
-
-.poem-card h3 {
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
-.poem {
-    font-size: 22px;
-    color: #dedee5;
-}
-
-.poem p {
-    margin-bottom: 28px;
-}
-
-.signature {
-    text-align: right;
-    color: #c9a96e;
-    margin-top: 40px;
-}
-
-.about {
-    background: #111117;
-}
-
-.about-text {
-    max-width: 750px;
-    font-size: 20px;
-    color: #c5c5cc;
-}
-
-.contact-text {
-    font-size: 20px;
-    color: #c5c5cc;
-}
-
-footer {
-    padding: 30px 0;
-    border-top: 1px solid #292932;
-    color: #777780;
-    text-align: center;
-    font-size: 14px;
-}
-
-@media (max-width: 700px) {
-
-    .nav {
-        flex-direction: column;
-        padding: 18px 0;
-    }
-
-    nav a {
-        margin: 0 8px;
-        font-size: 13px;
-    }
-
-    .hero {
-        min-height: 80vh;
-    }
-
-    .hero-content {
-        padding: 60px 0;
-    }
-
-    .hero-text {
-        font-size: 17px;
-    }
-
-    section {
-        padding: 70px 0;
-    }
-
-    h2 {
-        font-size: 34px;
-    }
-
-    .poem-card {
-        padding: 28px 22px;
-    }
-
-    .poem {
-        font-size: 19px;
-    }
-}
-</style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Suriyaraj Gunasekaran",
-  "url": "https://suriyaraj6748-hub.github.io/",
-  "jobTitle": "Tamil Writer and Poet",
-  "description": "Tamil writer and poet sharing original poems, thoughts and writings."
-}
-</script>
-
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 100px;
+        }
+        section {
+            padding: 30px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-<div class="container nav">
+    <header>
+        <h1>Suriyaraj Gunasekaran</h1>
+        <p>தமிழ் எழுத்தாளர் / Tamil Author</p>
+    </header>
 
-<a href="#home" class="logo">
-Suriyaraj Gunasekaran
-</a>
+    <main>
+        <section id="about">
+            <h2>வரவேற்பு (Welcome)</h2>
+            <p>Welcome to my official website. Here you can find updates on my writing, articles, and literary works.</p>
+        </section>
+    </main>
 
-<nav>
-<a href="#poems">கவிதைகள்</a>
-<a href="#about">என்னைப் பற்றி</a>
-<a href="#contact">தொடர்பு</a>
-</nav>
-
-</div>
-</header>
-
-
-<main>
-
-<section id="home" class="hero">
-
-<div class="container">
-
-<div class="hero-content">
-
-<div class="tag">
-தமிழ் எழுத்தாளர் • கவிஞர்
-</div>
-
-<h1>
-சொல்ல முடியாத<br>
-<span>உணர்வுகளுக்கு</span><br>
-சொற்கள்.
-</h1>
-
-<p class="hero-text">
-எண்ணங்களையும் உணர்வுகளையும் தமிழ்ச் சொற்களாகப்
-பதிவு செய்யும் ஒரு சிறிய எழுத்துப் பயணம்.
-</p>
-
-<a href="#poems" class="button">
-கவிதைகளை வாசிக்க →
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="poems">
-
-<div class="container">
-
-<div class="section-title">
-எழுத்துக்கள்
-</div>
-
-<h2>கவிதைகள்</h2>
-
-
-<article class="poem-card">
-
-<div class="section-title">
-கவிதை
-</div>
-
-<h3>
-மாய உலகில் ஒரு பூ
-</h3>
-
-<div class="poem">
-
-<p>
-பூக்கள் நிறைந்த தோட்டத்தில்,<br>
-எவரும் பறிக்க விரும்பாத பூவாக நான்…
-</p>
-
-<p>
-மலர்ந்தால் என்ன?<br>
-மடிந்தால் என்ன?
-</p>
-
-<p>
-இந்த மாய உலகில்,<br>
-மறைந்து விடத்தான்<br>
-ஏங்குகிறது என் மனம்…
-</p>
-
-</div>
-
-<div class="signature">
-— Suriyaraj Gunasekaran
-</div>
-
-</article>
-
-</div>
-
-</section>
-
-
-<section id="about" class="about">
-
-<div class="container">
-
-<div class="section-title">
-என்னைப் பற்றி
-</div>
-
-<h2>
-Suriyaraj Gunasekaran
-</h2>
-
-<p class="about-text">
-தமிழ் மொழியின் அழகையும் மனித உணர்வுகளின் ஆழத்தையும்
-எழுத்தின் வழியாக வெளிப்படுத்த விரும்பும் ஒரு இளம் எழுத்தாளர்.
-கவிதைகள், சிந்தனைகள் மற்றும் வாழ்க்கை அனுபவங்களை
-எளிய சொற்களில் பதிவு செய்வதே இந்தப் பயணத்தின் நோக்கம்.
-</p>
-
-</div>
-
-</section>
-
-
-<section id="contact">
-
-<div class="container">
-
-<div class="section-title">
-தொடர்பு
-</div>
-
-<h2>
-எழுத்துப் பயணத்துடன் இணைந்திருங்கள்.
-</h2>
-
-<p class="contact-text">
-புதிய கவிதைகள் மற்றும் எழுத்துக்கள் தொடர்ந்து
-இந்த இணையதளத்தில் சேர்க்கப்படும்.
-</p>
-
-</div>
-
-</section>
-
-</main>
-
-
-<footer>
-
-<div class="container">
-
-© 2026 Suriyaraj Gunasekaran
-<br>
-தமிழ் எழுத்தாளர் • கவிஞர்
-
-</div>
-
-</footer>
+    <footer>
+        <p>&copy; 2026 Suriyaraj Gunasekaran. All rights reserved.</p>
+    </footer>
 
 </body>
-  </html>
+</html>
