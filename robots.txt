@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suriyaraj6748-hub.github.io/sitemap.xml
