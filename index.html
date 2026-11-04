@@ -2,36 +2,7 @@
 <html lang="ta">
 
 <style>
-.poem-container {
-    background: linear-gradient(
-        135deg,
-        #101827,
-        #202d42,
-        #111827
-    );
-    padding: 45px 25px;
-    margin: 45px auto;
-    max-width: 750px;
-    border-radius: 18px;
-    text-align: center;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.35);
-}
 
-.poem-container p {
-    color: #f5e6c8;
-    font-size: 20px;
-    line-height: 2;
-    margin-bottom: 30px;
-}
-
-.poem-author {
-    color: #d9b56d;
-    margin-top: 45px;
-    line-height: 2;
-    font-size: 17px;
-    letter-spacing: 1px;
-}
-</style>
 <head>
     <meta charset="UTF-8">
 
@@ -99,6 +70,192 @@
         }
     }
     </script>
+
+/* ===== RJ SURYA PREMIUM MIDNIGHT THEME ===== */
+
+body {
+    background: #080e19;
+    color: #f5eee0;
+}
+
+/* Main hero background */
+header {
+    background:
+        radial-gradient(ellipse at 50% 20%,
+        #34445e 0%,
+        #18263b 40%,
+        #080e19 100%);
+}
+
+/* All main sections */
+.about,
+.writings,
+.featured,
+.instagram {
+    background: linear-gradient(
+        145deg,
+        #101c2d,
+        #0a1220,
+        #111b2c
+    );
+}
+
+/* Section headings */
+.section-title {
+    color: #e8c98b;
+}
+
+.section-title::after {
+    background: #d9b56d;
+}
+
+/* Writing cards */
+.writing-card {
+    background: linear-gradient(
+        145deg,
+        #1b2a40,
+        #101827
+    );
+    border: 1px solid #40506a;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.writing-card:hover {
+    border-color: #d9b56d;
+}
+
+/* Featured poem */
+.poem {
+    background: linear-gradient(
+        135deg,
+        #18283e,
+        #263750,
+        #101827
+    );
+    border: 1px solid #b4945c;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+}
+
+.poem h3 {
+    color: #e8c98b;
+}
+
+.poem-text {
+    color: #fff0d5;
+}
+
+.poem-author {
+    color: #d9b56d;
+}
+
+/* All poems section */
+.all-poems {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(
+        160deg,
+        #101c2d,
+        #080e19,
+        #192840
+    );
+}
+
+.all-poems h2 {
+    color: #e8c98b;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.all-poems-intro {
+    color: #c3cbd8;
+    margin-bottom: 40px;
+}
+
+.poem-collection {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+.collection-card {
+    padding: 30px 22px;
+    border-radius: 18px;
+    background: linear-gradient(
+        135deg,
+        #1b2c43,
+        #101827
+    );
+    border: 1px solid #455671;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.collection-card h3 {
+    color: #e8c98b;
+    margin-bottom: 25px;
+}
+
+.collection-tamil {
+    color: #fff0d5;
+    font-size: 18px;
+    line-height: 2.1;
+}
+
+.translation {
+    margin-top: 22px;
+    color: #d9b56d;
+    text-align: left;
+}
+
+.translation summary {
+    cursor: pointer;
+}
+
+.translation p {
+    color: #d6deeb;
+    margin-top: 12px;
+    line-height: 1.8;
+}
+
+.collection-author {
+    color: #d9b56d;
+    margin-top: 28px;
+    line-height: 2;
+}
+
+/* Instagram and footer */
+.instagram-button {
+    border-color: #d9b56d;
+    color: #f5e6c8;
+}
+
+.instagram-button:hover {
+    background: #d9b56d;
+    color: #101827;
+}
+
+footer {
+    background: #050a12;
+    color: #c2ad87;
+    border-top: 1px solid #34445e;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .all-poems {
+        padding: 60px 16px;
+    }
+
+    .all-poems h2 {
+        font-size: 28px;
+    }
+
+    .collection-card {
+        padding: 25px 18px;
+    }
+}
  <style>
 
         * {
