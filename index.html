@@ -658,7 +658,27 @@ footer {
             }
         }
 
-    </style>
+    
+        .poem-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 24px;
+        }
+        .poem-nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #d9b56d;
+            border-radius: 24px;
+            color: #e8c98b;
+            transition: 0.3s;
+        }
+        .poem-nav a:hover {
+            background: #d9b56d;
+            color: #101827;
+        }
+</style>
 </head>
 
 <body>
@@ -694,6 +714,11 @@ footer {
                 என் எழுத்துக்கள்
 
             </a>
+
+            <nav class="poem-nav" aria-label="Poem categories">
+                <a href="#love-poems">காதல் கவிதைகள்</a>
+                <a href="#social-poems">சமூகக் கவிதைகள்</a>
+            </nav>
 
         </div>
 
@@ -883,14 +908,12 @@ footer {
 <!-- =========================
      ALL POEMS - RJ SURYA
 ========================= -->
-<section class="all-poems" id="all-poems">
-    <h2>என் கவிதைகள் | All Poems</h2>
-    <p class="all-poems-intro">
-        A collection of thoughts, feelings and stories — written by RJ Surya.
-    </p>
-
-    <div class="poem-collection">        
-        <div class="collection-card">
+<!-- LOVE POEMS -->
+<section class="all-poems" id="love-poems">
+    <h2>காதல் கவிதைகள் | Love Poems</h2>
+    <p class="all-poems-intro">காதல், அழகு, நினைவுகள் மற்றும் சொல்லப்படாத உணர்வுகள் — RJ Surya.</p>
+    <div class="poem-collection">
+<div class="collection-card">
             <h3>கொலுசுகளிடம் தஞ்சம்</h3>
 
             <div class="collection-tamil">
@@ -920,7 +943,7 @@ footer {
             </div>
     </div>
 
-        <div class="collection-card">
+<div class="collection-card">
             <h3>அவள் — ஓர் ஓவியம்</h3>
             <div class="collection-tamil">
                 எத்தனையோ சிதறல்களாக<br>
@@ -940,7 +963,7 @@ footer {
             </div>
         </div>
 
-        <div class="collection-card">
+<div class="collection-card">
             <h3>அவளின் புன்னகையும் கண்ணீரும்</h3>
             <div class="collection-tamil">
                 அன்று அவளின் புன்னகை கண்டு<br>
@@ -958,7 +981,7 @@ footer {
             </div>
         </div>
 
-        <div class="collection-card">
+<div class="collection-card">
             <h3>அவள் — ஒரு புத்தகம்</h3>
             <div class="collection-tamil">
                 வாசிக்கக் கடினமான புத்தகம் அவள்;<br>
@@ -976,7 +999,7 @@ footer {
             </div>
         </div>
 
-        <div class="collection-card">
+<div class="collection-card">
             <h3>இறக்கைகள் இல்லாத அவள்</h3>
             <div class="collection-tamil">
                 அந்த அழகிய ஆண் மயிலின் கர்வமும் உடைந்துவிடும்<br>
@@ -992,7 +1015,7 @@ footer {
             </div>
         </div>
 
-        <div class="collection-card">
+<div class="collection-card">
             <h3>அவள் கொடுத்த உயிரோட்டம்</h3>
             <div class="collection-tamil">
                 என் கவிதைகளின் தேடலில்,<br>
@@ -1018,8 +1041,7 @@ footer {
             </div>
         </div>
 
-
-        <div class="collection-card">
+<div class="collection-card">
             <h3>இரவு பகல் மாறினாலும்</h3>
             <div class="collection-tamil">
                 இரவு பகல் மாறி மாறி வந்தாலும்<br>
@@ -1038,34 +1060,7 @@ footer {
             </div>
         </div>
 
-        <div class="collection-card">
-            <h3>கானகத்தின் கடைசி தாலாட்டு</h3>
-            <div class="collection-tamil">
-                வானுயர்ந்த மூங்கில்களோ வீசும் காற்றோடிணைந்து புல்லாங்குழல் வாசிக்க<br>
-                அதன் மேலமர்ந்த கானக்குயில்களோ அழகிய கானம் பாட<br>
-                அதைக் கேட்கும் விலங்குகள் பறவைகள் எல்லாம் ஆராவாரம் செய்ய<br>
-                அதைக் கேட்கும் இந்த மனித மனமோ சற்றும் இறக்கம் கொள்ளாதோ<br>
-                அவைகளின் வாழ்விடத்தைக் கண்டு<br><br>
-                சற்றும் இறக்கம் கொள்ளாதோ!....
-            </div>
-            <details class="translation">
-                <summary>Read English Translation</summary>
-                <p>
-                    The towering bamboo plays its flute in harmony with the passing breeze;<br>
-                    The forest cuckoos perched upon it sing beautiful melodies.<br>
-                    The animals and birds who hear them rejoice in delight.<br>
-                    Yet, will the human heart feel no compassion<br>
-                    when it sees their homes being taken away?<br>
-                    Will it feel no pity at all?....
-                </p>
-            </details>
-            <div class="collection-author">
-                — RJ Surya<br>
-                Suriyaraj Gunasekaran
-            </div>
-        </div>
-
-        <div class="collection-card">
+<div class="collection-card">
             <h3>இவளின் இதயத் திருடன்</h3>
             <div class="collection-tamil">
                 இவள் இடை அழகை ரசிப்பதா?<br>
@@ -1106,8 +1101,7 @@ footer {
             </div>
         </div>
 
-
-        <div class="collection-card">
+<div class="collection-card">
             <h3>அவள் பேசுகிறாள்</h3>
             <div class="collection-tamil">
                 அவள் பேசுகிறாள், வார்த்தைகளால் அல்லாமல்...<br>
@@ -1122,16 +1116,7 @@ footer {
             </div>
         </div>
 
-    </div>
-</section>
-<!-- END ALL POEMS -->
-
-<!-- NEW POEM: KAATHAL ENUM PERUNGADAL -->
-<section class="all-poems" id="kaathal-perungadal">
-    <h2>புதிய கவிதை | New Poem</h2>
-    <p class="all-poems-intro">காதல், பிரிவு மற்றும் நினைவுகளின் ஆழத்தில் ஒரு பயணம்.</p>
-    <div class="poem-collection">
-        <div class="collection-card">
+<div class="collection-card">
             <h3>காதல் எனும் பெருங்கடல்</h3>
             <div class="collection-tamil">
                 காதல் எனும் பெருங்கடலில்<br>
@@ -1151,18 +1136,8 @@ footer {
                Read Full Poem →
             </a>
         </div>
-    </div>
-</section>
-<!-- END NEW POEM -->
 
-
-
-<!-- NEW POEM: SELAIYIL AVAL -->
-<section class="all-poems" id="selaiyil-aval">
-    <h2>புதிய கவிதை | New Poem</h2>
-    <p class="all-poems-intro">அழகையும் மங்கையின் மதிமுகத்தையும் வர்ணிக்கும் சில வரிகள்.</p>
-    <div class="poem-collection">
-        <div class="collection-card">
+<div class="collection-card">
             <h3>சேலையில் அவள்</h3>
             <div class="collection-tamil">
                 சேலையில் அவள் சோலையில் பூத்த பூ<br>
@@ -1180,7 +1155,90 @@ footer {
         </div>
     </div>
 </section>
-<!-- END NEW POEM: SELAIYIL AVAL -->
+<!-- END LOVE POEMS -->
+
+<!-- SOCIAL AND LIFE POEMS -->
+<section class="all-poems" id="social-poems">
+    <h2>சமூகக் கவிதைகள் | Social & Life Poems</h2>
+    <p class="all-poems-intro">இயற்கை, மனிதர்கள், வாழ்க்கை மற்றும் மாறிவரும் சமூகத்தைப் பற்றிய சிந்தனைகள்.</p>
+    <div class="poem-collection">
+<div class="collection-card">
+            <h3>கானகத்தின் கடைசி தாலாட்டு</h3>
+            <div class="collection-tamil">
+                வானுயர்ந்த மூங்கில்களோ வீசும் காற்றோடிணைந்து புல்லாங்குழல் வாசிக்க<br>
+                அதன் மேலமர்ந்த கானக்குயில்களோ அழகிய கானம் பாட<br>
+                அதைக் கேட்கும் விலங்குகள் பறவைகள் எல்லாம் ஆராவாரம் செய்ய<br>
+                அதைக் கேட்கும் இந்த மனித மனமோ சற்றும் இறக்கம் கொள்ளாதோ<br>
+                அவைகளின் வாழ்விடத்தைக் கண்டு<br><br>
+                சற்றும் இறக்கம் கொள்ளாதோ!....
+            </div>
+            <details class="translation">
+                <summary>Read English Translation</summary>
+                <p>
+                    The towering bamboo plays its flute in harmony with the passing breeze;<br>
+                    The forest cuckoos perched upon it sing beautiful melodies.<br>
+                    The animals and birds who hear them rejoice in delight.<br>
+                    Yet, will the human heart feel no compassion<br>
+                    when it sees their homes being taken away?<br>
+                    Will it feel no pity at all?....
+                </p>
+            </details>
+            <div class="collection-author">
+                — RJ Surya<br>
+                Suriyaraj Gunasekaran
+            </div>
+        </div>
+
+<div class="collection-card">
+            <h3>மாய உலகில் ஒரு பூ</h3>
+            <div class="collection-tamil">
+                பூக்கள் நிறைந்த தோட்டத்தில்,<br>
+                எவரும் பறிக்க விரும்பாத பூவாக நான்…<br><br>
+                மலர்ந்தால் என்ன?<br>
+                மடிந்தால் என்ன?<br><br>
+                இந்த மாய உலகில்,<br>
+                மறைந்து விடத்தான்<br>
+                ஏங்குகிறது என் மனம்…
+            </div>
+            <div class="collection-author">— RJ Surya<br>Suriyaraj Gunasekaran</div>
+        </div>
+
+<div class="collection-card">
+            <h3>ஒரு நாள்காட்டியின் சுற்றுலாப் பயணம்</h3>
+            <div class="collection-tamil">
+                வருடம் முழுவதும் ஓர் இடத்திலேயே அடைபட்டிருந்த எனக்கு,<br>
+                வருடத்தில் ஒருமுறைதான் வாய்ப்பு கிடைக்கிறது<br>
+                இந்த உலகத்தைச் சுற்றிவர!<br><br>
+                அதுவும் புத்தாண்டு பிறக்கப்போகும் தருவாயில்...<br><br>
+                இந்த உலகத்தில்தான் எத்தனை மாற்றங்கள்!<br>
+                வருடத்திற்கு ஒருமுறை வருவதால்<br>
+                அனைத்தும் எனக்கு ஆச்சரியத்தை ஏற்படுத்துகின்றன.<br><br>
+                வகை வகையான வாகனங்களில்<br>
+                பயணித்துக்கொண்டே வழியெங்கும்<br>
+                இந்த வேடிக்கை உலகத்தை ரசித்துக்கொண்டிருக்கிறேன்.<br><br>
+                இன்று பல மாடிக் கட்டிடங்கள் எல்லாம்<br>
+                மின்விளக்குகளின் ஒளியில் பளபளக்கின்றன.<br><br>
+                அன்று பழமையான காடுகள் எல்லாம்<br>
+                மின்மினிப் பூச்சிகளால் பிரகாசித்தன.<br><br>
+                அன்று அழகாக இருந்த ஏரிகள் எல்லாம்<br>
+                இன்றோ அடுக்குமாடிக் கட்டிடங்களாகிவிட்டன.<br><br>
+                அனைத்தும் மாறிவிட்ட இவ்வுலகில்,<br>
+                விரைவில் என்னையும் மாற்றிவிடுவீர்கள்<br>
+                என்று எண்ணிக்கொண்டே தயாரானேன்...<br><br>
+                ஓர் நிரந்தர இடத்தில்<br>
+                மீண்டும் அடைபடுவதற்கு!
+            </div>
+            <div class="collection-author">— RJ Surya<br>Suriyaraj Gunasekaran</div>
+        </div>
+    </div>
+</section>
+<!-- END SOCIAL AND LIFE POEMS -->
+
+
+
+
+
+
 
 <!-- SUYAMARIYATHAI STORY -->
 <section class="all-poems" id="suyamariyathai">
