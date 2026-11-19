@@ -733,6 +733,79 @@ footer {
 @media(max-width:900px){.site-nav{align-items:flex-start;flex-direction:column;padding:22px 0}.nav-links{justify-content:flex-start}.hero-content{padding-top:85px}.category-grid{grid-template-columns:1fr 1fr}.category-card:last-child{grid-column:1/-1;min-height:390px}}
 @media(max-width:600px){.new-hero{min-height:640px;padding:0 22px 65px}.site-nav{gap:17px}.nav-links{gap:10px 15px}.nav-links a{font-size:13px}.hero-content{padding-top:72px}.hero-kicker{font-size:13px;letter-spacing:2px}.moon-glow{width:115px;height:115px;top:250px;right:8%;opacity:.6}.category-showcase{padding:28px 16px 48px}.category-grid{grid-template-columns:1fr;gap:20px}.category-card,.category-card:last-child{grid-column:auto;height:430px;min-height:430px}.category-overlay{padding:24px 18px}}
 
+
+/* ===== RJ SURYA INTERACTIVE READING EXPERIENCE ===== */
+.category-card,
+.collection-card,
+.poem-card,
+.tamil-pride-card {
+  transform: translateZ(0);
+}
+.category-card {
+  transition: transform .55s cubic-bezier(.2,.8,.2,1), box-shadow .55s, border-color .4s;
+  -webkit-tap-highlight-color: transparent;
+}
+.category-card:active { transform: scale(.985); }
+.category-card.category-touched {
+  border-color: #ffe0a0;
+  box-shadow: 0 0 0 2px rgba(233,189,101,.22), 0 0 38px rgba(233,189,101,.32);
+}
+.category-card.category-touched:before {
+  content: "✦";
+  position: absolute;
+  z-index: 3;
+  top: 22px;
+  right: 24px;
+  color: #ffe4a8;
+  font-size: 30px;
+  text-shadow: 0 0 18px #f4c66c;
+  pointer-events: none;
+  animation: rjSparkle 1.1s ease-out both;
+}
+.collection-card,
+.poem-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform .45s ease, border-color .45s ease, box-shadow .45s ease, background .45s ease;
+}
+.collection-card.is-reading,
+.poem-card.is-reading {
+  transform: translateY(-4px);
+  border-color: #e8c98b;
+  box-shadow: 0 0 0 1px rgba(217,181,109,.22), 0 16px 42px rgba(0,0,0,.42), 0 0 28px rgba(217,181,109,.12);
+}
+.collection-card.is-reading:after,
+.poem-card.is-reading:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 20%, rgba(255,226,165,.09) 48%, transparent 72%);
+  transform: translateX(-120%);
+  animation: rjReadingShine 1s ease forwards;
+}
+.collection-card h3,
+.poem-card h3 { transition: color .35s, text-shadow .35s; }
+.collection-card.is-reading h3,
+.poem-card.is-reading h3 { color: #ffe0a0; text-shadow: 0 0 18px rgba(244,198,108,.25); }
+.collection-tamil,
+.poem-card p:not(.poem-author) { animation: rjTextSettle .7s ease both; }
+.translation[open] p { animation: rjTranslationIn .55s ease both; }
+.category-arrival .section-title,
+.category-arrival > h2 { animation: rjHeadingIn .8s ease both; }
+.category-arrival .collection-card,
+.category-arrival .poem-card { animation: rjCardIn .7s ease both; }
+@keyframes rjSparkle { 0%{opacity:0;transform:scale(.3) rotate(-35deg)} 45%{opacity:1;transform:scale(1.25) rotate(15deg)} 100%{opacity:.85;transform:scale(1) rotate(0)} }
+@keyframes rjReadingShine { to { transform:translateX(120%); } }
+@keyframes rjTextSettle { from{opacity:.55;transform:translateY(7px)} to{opacity:1;transform:translateY(0)} }
+@keyframes rjTranslationIn { from{opacity:0;transform:translateY(9px)} to{opacity:1;transform:translateY(0)} }
+@keyframes rjHeadingIn { from{opacity:0;transform:translateY(14px);letter-spacing:4px} to{opacity:1;transform:translateY(0);letter-spacing:normal} }
+@keyframes rjCardIn { from{opacity:.55;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+@media (prefers-reduced-motion: reduce) {
+  .category-card,.collection-card,.poem-card,.collection-card h3,.poem-card h3 { transition:none !important; animation:none !important; }
+  .category-card.category-touched:before { animation:none !important; }
+}
+
 </style>
 </head>
 
@@ -2287,5 +2360,56 @@ footer {
 
     </script>
 
+<script>
+
+/* RJ Surya: touch feedback + gentle poem reveal */
+(function () {
+  const categoryLinks = document.querySelectorAll('.category-card[href^="#"]');
+  categoryLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      categoryLinks.forEach(function (item) { item.classList.remove('category-touched'); });
+      link.classList.add('category-touched');
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        target.classList.remove('category-arrival');
+        void target.offsetWidth;
+        target.classList.add('category-arrival');
+        window.setTimeout(function () { target.classList.remove('category-arrival'); }, 1500);
+      }
+    });
+  });
+
+  const readingCards = document.querySelectorAll('.collection-card, .poem-card');
+  readingCards.forEach(function (card) {
+    card.addEventListener('click', function (event) {
+      if (event.target.closest('a, button, summary, input, video, audio')) return;
+      card.classList.toggle('is-reading');
+    });
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'group');
+    card.addEventListener('keydown', function (event) {
+      if ((event.key === 'Enter' || event.key === ' ') && event.target === card) {
+        event.preventDefault();
+        card.classList.toggle('is-reading');
+      }
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('rj-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.category-card, .collection-card, .poem-card, .tamil-pride-card').forEach(function (card) {
+      observer.observe(card);
+    });
+  }
+})();
+
+</script>
 </body>
           </html>
