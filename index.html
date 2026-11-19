@@ -806,6 +806,43 @@ footer {
   .category-card.category-touched:before { animation:none !important; }
 }
 
+
+/* Homepage Instagram link */
+.hero-social-link {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin:22px 0 0 14px;
+  padding:12px 21px;
+  border:1px solid rgba(233,189,101,.62);
+  border-radius:30px;
+  color:#f8dfae;
+  background:rgba(8,18,35,.42);
+  font:15px Georgia,serif;
+  letter-spacing:.35px;
+  transition:background .3s ease, color .3s ease, transform .3s ease, box-shadow .3s ease;
+  vertical-align:middle;
+}
+.hero-social-link:hover {
+  background:#e9bd65;
+  color:#071225;
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(233,189,101,.22);
+}
+.hero-social-link .instagram-mark {
+  display:inline-grid;
+  place-items:center;
+  width:24px;
+  height:24px;
+  border:1.5px solid currentColor;
+  border-radius:7px;
+  font:18px Arial,sans-serif;
+  line-height:1;
+}
+@media(max-width:600px) {
+  .hero-social-link { margin:16px 0 0; padding:11px 18px; font-size:14px; }
+}
+
 </style>
 </head>
 
@@ -830,6 +867,7 @@ footer {
     <div class="gold-rule"><span>✦</span></div>
     <p class="hero-quote">“சொல்ல முடியாத உணர்வுகளுக்கு சொற்கள்.”</p>
     <a class="hero-button" href="#poem-categories">Explore My Writings <span>→</span></a>
+    <a class="hero-social-link" href="https://www.instagram.com/am_the_king_rj/" target="_blank" rel="noopener noreferrer" aria-label="Visit RJ Surya on Instagram"><span class="instagram-mark" aria-hidden="true">◎</span> @am_the_king_rj</a>
   </div><div class="moon-glow" aria-hidden="true"></div>
 </header>
 
